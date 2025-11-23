@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: atlas-web-tester
+    env: python
+    buildCommand: pip install -e . && playwright install chromium --with-deps
+    startCommand: python -m uvicorn atlas_agent.web:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false
