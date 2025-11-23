@@ -179,5 +179,19 @@ def config():
     console.print(table)
 
 
+@main.command()
+@click.option("--host", "-h", default="0.0.0.0", help="Host to bind to")
+@click.option("--port", "-p", default=8000, help="Port to bind to")
+def web(host: str, port: int):
+    """Start the web interface.
+
+    Access ATLAS through your browser at http://localhost:8000
+    """
+    from atlas_agent.web import run_server
+    console.print(f"[green]Starting ATLAS Web Interface[/green]")
+    console.print(f"[blue]Open http://localhost:{port} in your browser[/blue]")
+    run_server(host=host, port=port)
+
+
 if __name__ == "__main__":
     main()
