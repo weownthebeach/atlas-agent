@@ -1,0 +1,14 @@
+[
+  {
+    "task": "Verify the page title is visible and correct",
+    "url": "https://example.com"
+  },
+  {
+    "task": "Check that all navigation links are present and clickable",
+    "url": "https://example.com"
+  },
+  {
+    "task": "Test that the page is responsive by checking element visibility",
+    "url": "https://example.com"
+  }
+]
